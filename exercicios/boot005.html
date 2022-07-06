@@ -100,8 +100,8 @@
                 <h1 class="my-4">Build fast, responsive sites <br></b><strong>with Bootstrap</strong></h1>
                 <p class="my-4 text-muted">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
         
-                <a href="#" style="border: 1px solid #a102d1;" class="roxo btn btn-primary btn-lg">Get Started</a>
-                <a href="#" class="btn btn-outline-secondary btn-lg">Download</a>
+                <a href="#exampleModal" style="border: 1px solid #a102d1;" class="roxo btn btn-primary btn-lg" data-bs-toggle="modal">Get Started</a>
+                <a href="#" class="btn btn-outline-secondary btn-lg" >Download</a>
             </div> 
 
             <div class="col-md-6 mt-5">
@@ -195,64 +195,83 @@
 
         <br><hr><br>
 
-        <p>
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Link with href
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+        </ol>
+
+        <div class="list-group mt-5">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            The current link item
           </a>
-          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Button with data-bs-target
-          </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
+          <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+          <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+          <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+          <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
         </div>
+        
 
-        <div class="dropdown mt-3">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-
-        <div class="btn-group mt-3">
-          <button type="button" class="btn btn-danger">Action</button>
-          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
-        </div>
 
         <br><hr><br>
 
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Wubba Lubba Dub Dub
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="row mt-5">
           <div class="col-md-6 mt-5">
-            <h2>Aula 11 á 13:</h2>
+            <h2>Aula 14 á 15:</h2>
             <ul>
-              <li>Cards e seus Tipos: <a href="https://getbootstrap.com/docs/5.2/components/card/">Components-Cards</a></li>
+              <li>List Group: <a href="https://getbootstrap.com/docs/5.2/components/list-group/">Components - List Group</a></li>
 
-              <li>Carousel e seus Tipos: <a href="https://getbootstrap.com/docs/5.2/components/carousel/">Components-Cards</a></li>
-
-              <li>Collapse: Botão e Link Toggle.: <a href="https://getbootstrap.com/docs/5.2/components/collapse/"> Components-Collapse</a></li>
-
-              <li>Dropdown e seus Tipos: <a href="https://getbootstrap.com/docs/5.2/components/dropdowns/"> Components-Dropdown</a></li>
+              <li>Modais e Tipos:</li> <a href="https://getbootstrap.com/docs/5.2/components/modal/">Components - Modal</a></li>
             </ul>
           </div>
         </div>
       </div>
 
     <script src="../../deps/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const modal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
+
+      setTimeout( function () {
+        modal.show()
+      }, 3000)
+
+    </script>
 </body>
 </html>
